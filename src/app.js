@@ -1,7 +1,9 @@
 import express from 'express'
 
 const app = express()
+
 app.use(express.json())
+app.use(express.static('src/public'))
 
 app.get("/", (req, res) => {
     res.send("Welcome from the Home Page")
